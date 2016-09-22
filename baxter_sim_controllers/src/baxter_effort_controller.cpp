@@ -35,6 +35,14 @@
 #include <baxter_sim_controllers/baxter_effort_controller.h>
 #include <pluginlib/class_list_macros.h>
 
+// Note copied from joint_effort_controller.cpp to avoid a linker error on clang
+template <class T>
+void forward_command_controller::ForwardCommandController<T>::starting(const ros::Time& time)
+{
+  // Start controller with 0.0 effort
+  command_buffer_.writeFromNonRT(0.0);
+}
+
 
 namespace baxter_sim_controllers {
 
