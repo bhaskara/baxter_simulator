@@ -87,7 +87,7 @@ bool BaxterEffortController::init(
     }
 	
     // Get joint names from the parameter server
-     std::string joint_name[n_joints_];
+    std::vector<std::string> joint_name(n_joints_);
     // Get joint controller name
     std::string joint_controller_name = joint_it->first;
    
