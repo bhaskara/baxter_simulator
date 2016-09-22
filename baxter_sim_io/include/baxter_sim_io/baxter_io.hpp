@@ -38,7 +38,9 @@
 #include <QtGui/QMainWindow>
 #include <QBitmap>
 #include <QPushButton>
+#ifndef Q_MOC_RUN
 #include "ui_baxter_io.h"
+#endif
 #include "qnode.hpp"
 
 namespace baxter_sim_io {
